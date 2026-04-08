@@ -1,13 +1,15 @@
 import java.util.Scanner;
 public class IDExtractor{
 
-    public static String getMonthName(int month){
+    public static String getMonthName(int month)
+    {
         String[] months = {"January","February","March","April","May","June","July","August","September","October","November","December"};
         return months [month - 1];
     }
 
 
-    public static void main(String[] args){
+    public static void main(String[] args)
+    {
         Scanner kb = new Scanner(System.in);
         do{
             System.out.print("Enter ID (z to exit) : ");
@@ -22,7 +24,6 @@ public class IDExtractor{
 
             int yyInt = Integer.parseInt(yy);
             int year = (yyInt <= 24) ? 2000 + yyInt : 1900 + yyInt;
-            
             int month = Integer.parseInt(mm);
             int day = Integer.parseInt(dd);
 
