@@ -58,11 +58,15 @@ public class ct2 {
 
         boolean strong = hasCorrectLength(password) && hasUpperCase(password) && hasLowerCase(password) && hasDigit(password) && hasSpecialCharacter(password); 
 
-        System.out.println("Correct length: " + hasCorrectLength(password));
-        System.out.println("Has uppercase:  " + hasUpperCase(password));
-        System.out.println("Has lowercase:  " + hasLowerCase(password));
-        System.out.println("Has digit:      " + hasDigit(password));
-        System.out.println("Has special:    " + hasSpecialCharacter(password));
+        if(hasCorrectLength(password)) {
+            System.out.println("Correct length: " + hasCorrectLength(password));
+        }else{
+            System.out.println("No correct length");
+        }
+        if(hasUpperCase(password)) System.out.println("Has uppercase:  " + hasUpperCase(password));
+        if(hasLowerCase(password)) System.out.println("Has lowercase:  " + hasLowerCase(password));
+        if(hasDigit(password)) System.out.println("Has digit:      " + hasDigit(password));
+        if(isStrongPassword(password)) System.out.println("Has special:    " + hasSpecialCharacter(password));
 
 
         System.out.println("Strong password: " + strong);
