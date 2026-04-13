@@ -9,8 +9,5 @@ public class UsernamePassword2 {
             if(!password.contains("#")){
                 System.out.print("Invalid password, must contain '#' ");
             };
-        
-        
-
     }
 }
