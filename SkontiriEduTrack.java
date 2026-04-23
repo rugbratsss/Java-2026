@@ -1,3 +1,12 @@
+    public static void populateRatings(int[] ratings, String[] platform)
+    {
+        Scanner kb = new Scanner(System.in);
+        for (int i = 0; i < ratings.length; i++)
+        {
+            System.out.print("Enter the user rating (1 - 5) for " + platform[i] + ": ");
+            ratings[i] = kb.nextInt();
+        }
+    }
 public static void populateUsers(int[] users)
     {
         Random rand = new Random();
