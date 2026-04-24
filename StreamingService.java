@@ -1,6 +1,40 @@
 import java.util.Scanner;
 import java.util.Random;
 public class StreamingService {
+    public static void displayStreamingServices(String[] serviceProviders, String[] originCountry, int[] subscribers, int[] userRatings)
+    {
+        System.out.println("=================================================================");
+        System.out.println("Service Providers\t\tCountry\t\tSubscribers\tUser Ratings");
+
+        for(int i = 0; i < userRatings.length; i++){
+            System.out.println(serviceProviders[i] + "\t\t\t\t" + originCountry[i] + "\t\t" + subscribers[i] + "\t\t" + userRatings[i]);
+        }
+    }
+    public static void sortServiceProvider (String[] serviceProviders, String[] originCountry, int[] subscribers, int[] userRatings)
+    {
+        for(int i = 0; i < serviceProviders.length - 1; i++){
+            for(int j = 0; j < serviceProviders.length - i - 1; j++){
+                if(serviceProviders[j].compareTo(serviceProviders[j + 1]) > 0){
+
+                    String tempService = serviceProviders[j];
+                    serviceProviders[j] = serviceProviders[j + 1];
+                    serviceProviders[j + 1] = tempService;
+
+                    String tempCountry = originCountry[j];
+                    originCountry[j] = originCountry[j + 1];
+                    originCountry[j + 1] = tempCountry;
+
+                    int tempSubs = subscribers[j];
+                    subscribers[j] = subscribers[j + 1];
+                    subscribers[j + 1] = tempSubs;
+
+                    int tempRate = userRatings[j];
+                    userRatings[j] = userRatings[j + 1];
+                    userRatings[j + 1] = tempRate;
+                }
+            }
+        }
+    }
     public static int mostWatchedService (int[]subscribers)
     {
         int index = 0;
@@ -51,5 +85,10 @@ public class StreamingService {
         int mostWatchedIndex = mostWatchedService (subscribers);
         System.out.println("Most watched service provider " + serviceProviders[mostWatchedIndex] + " " + subscribers[mostWatchedIndex] + " subscribers.");
         
+        sortServiceProvider(serviceProviders,originCountry,subscribers,userRatings);
+        displayStreamingServices(serviceProviders,originCountry,subscribers,userRatings);
+
+        
+
     }
 }
