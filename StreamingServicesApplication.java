@@ -10,7 +10,7 @@ public class StreamingServicesApplication {
                 userRatings[i] = kb.nextInt();
                 while(userRatings[i] > 1 || userRatings[i] < 5)
                 {
-                    System.out.print("Invalid input, enter a number from 1 to 5: ");
+                    System.out.print("Invalid input, enter a number from 1 to 5 for " + serviceProviders[i] + ": ");
                     userRatings[i] = kb.nextInt();
                 }
               
