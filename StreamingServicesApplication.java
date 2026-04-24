@@ -4,9 +4,9 @@ public class StreamingServicesApplication {
     public static void displayStreamingServices(String[] serviceProviders, String[] originCountry, int[] subscribers, int[] userRatings)
     {
         System.out.println("=========================================================================");
+        System.out.println("Service Providers\tCountry\tSubscribers\tUser Ratings");
         for(int i = 0; i < serviceProviders.length; i++)
-        {
-            System.out.println("Service Providers\tCountry\tSubscribers\tUser Ratings");
+        {    
             System.out.println(serviceProviders[i] + "\t" + originCountry[i] + "\t" + subscribers[i] + "\t" + userRatings[i]);
         }
     }
@@ -14,9 +14,9 @@ public class StreamingServicesApplication {
     {
         for(int i = 0; i < serviceProviders.length - 1; i++)
         {
-            for(int a = 0; serviceProviders.length - i - 1; i++)
+            for(int a = 0; a < serviceProviders.length - i - 1; a++)
             {
-                if(serviceProviders[a].compareTo([serviceProviders[a +1]]) > 0)
+                if(serviceProviders[a].compareTo(serviceProviders[a + 1]) > 0)
                 {
                     String tempService = serviceProviders[a];
                     serviceProviders[a] = serviceProviders[a + 1];
