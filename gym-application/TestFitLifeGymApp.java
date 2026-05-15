@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class FitLifeGymApp{
+public class TestFitLifeGymApp{
 	public static void main(String[] args){
 		Scanner kb = new Scanner(System.in);
 		
